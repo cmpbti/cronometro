@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Cronômetro</title>
+  <link href="css/pomodoro-timer.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+  body {
+      background-color:#fafafa;
+  }
+  </style>
+</head>
+<body>
+	<div id="jquery-script-menu">
+		<div class="jquery-script-center">
+			<div class="jquery-script-clear"></div>
+		</div>
+	</div>
+  <div class="container" style="margin-top:10px;">
+  	 	<center><img src="img/logo.png" alt="Câmara Municipal"></center>
+      <h2 class="text-center">
+        <span>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="dezMinutos()">+10 Minutos</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="cincoMinutos()">+5 Minutos</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="tresMinutos()">+3 Minutos</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="doisMinutos()">+2 Minutos</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="umMinuto()">+1 Minuto</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="trintaSegundos()">+30 Segundos</button>
+          <button id="pomodoroButton" class="btn btn-default" type="submit" onclick="cincoSegundos()">+5 Segundos</button>
+        </span>
+      </h2>
+    
+    <h1>
+    <div class="panel panel-default">
+      <div class="panel-body text-center">
+        <div class="timer-time timer-container">
+          <div class="timer-time-set timer-box" id="currentTime">
+            <span id="minutesValue">00</span><span>:</span><span id="secondsValue">00</span>
+          </div>
+          <div class="timer-time-set timer-box" id="nextTime">
+            <span id="minutesNext">00</span><span>:</span><span id="secondsNext">00</span>
+          </div>
+        </div>
+        <div>
+          <button id="restartButton" class="btn btn-warning btn-lg" type="submit" onclick="onResetTimer()">
+            Resetar
+          </button>
+          <button id="startButton" class="btn btn-primary btn-lg" type="submit" onclick="onStartTimer()">
+            Iniciar 
+          </button>
+          <button id="stopButton" class="btn btn-danger btn-lg" type="submit" onclick="onStopTimer()">
+            Pausar
+          </button>
+             <button id="stopButton" class="btn btn-default btn-lg" type="submit" onclick="location.href='./relogio.html'">
+            Relógio
+          </button>
+        </div>
+      </div>
+    </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/pomodoro-timer.js"></script>
+  <script type="text/javascript">$(window).on("load", function(){onResetTimer()})</script> 
+ </body>
+</html>
